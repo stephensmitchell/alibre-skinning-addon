@@ -1,0 +1,10 @@
+<AlibreDesignAddOn specificationVersion="2" friendlyName="alibre-skinning">
+<Author name="Stephen S. Mitchell" link="https://github.com/stephensmitchell/alibre-skinning-addon"/>
+   <Copyright>Copyright (c) 2025 Stephen S. Mitchell</Copyright>
+   <DLL type="Managed" loadedWhen="Startup" location="alibre-skinning-addon-vb.dll"/>
+   <Icon location=""/> 
+   <Menu text="alibre-skinning-addon"/>
+   <Description>Demo</Description> 
+   <Workspace type="Always"/>
+   <Property name="Identifier" value="alibre-skinning-addon"/>
+</AlibreDesignAddOn>

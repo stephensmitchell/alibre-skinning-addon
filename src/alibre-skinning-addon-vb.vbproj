@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>AssimpInsideAlibreDesignAddon</RootNamespace>
+    <TargetFramework>net481</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="alibre-skinning-addon.adc" />
+    <None Remove="Scripts\src\hss\Template.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alibre-skinning-addon.adc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\src\hss\Template.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="IronPython" Version="3.4.2" />
+    <PackageReference Include="IronPython.StdLib" Version="3.4.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AlibreAddOn">
+      <HintPath>C:\Program Files\Alibre Design 28.1.1.28227\Program\AlibreAddOn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AlibreX">
+      <HintPath>C:\Program Files\Alibre Design 28.1.1.28227\Program\AlibreX.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
